@@ -12,6 +12,8 @@ namespace CRMApp.Models
         public string Agreement { get; set; }
         public DateTime Expire { get; set; }
         public DateTime StartDate { get; set; }
+        public decimal MonthlySalary { get; set; }
+
         [ForeignKey("AppUser")]
         public string AppUserId { get; set; }
         public AppUser AppUser { get; set; }

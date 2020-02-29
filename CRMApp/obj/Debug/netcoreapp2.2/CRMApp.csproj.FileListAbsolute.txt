@@ -30,3 +30,7 @@ C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\CRMApp.Views.p
 C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\CRMApp.dll
 C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\CRMApp.pdb
 C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\CRMApp.csproj.CopyComplete
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Rufet\Views\_ViewImports.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Rufet\Views\_ViewStart.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Samir\Views\_ViewImports.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Samir\Views\_ViewStart.cshtml.g.cs

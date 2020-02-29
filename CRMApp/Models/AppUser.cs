@@ -18,8 +18,10 @@ namespace CRMApp.Models
         public int CardId { get; set; }
         public Card Card { get; set; }
         public List<MonthlySalary> MonthlySalaries { get; set; }
+        public List<MonthlyAmount> MonthlyAmounts { get; set; }
         public int StaffContractId { get; set; }
         public StaffContract StaffContract { get; set; }
+        public List<Product> Products { get; set; }
 
     }
 }

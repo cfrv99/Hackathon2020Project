@@ -17,11 +17,11 @@
     <Folder Include="Areas\Rufet\Controllers\" />
     <Folder Include="Areas\Rufet\Data\" />
     <Folder Include="Areas\Rufet\Models\" />
-    <Folder Include="Areas\Rufet\Views\" />
+    <Folder Include="Areas\Rufet\Views\Shared\" />
     <Folder Include="Areas\Samir\Controllers\" />
     <Folder Include="Areas\Samir\Data\" />
     <Folder Include="Areas\Samir\Models\" />
-    <Folder Include="Areas\Samir\Views\" />
+    <Folder Include="Areas\Samir\Views\Shared\" />
   </ItemGroup>
 
 </Project>

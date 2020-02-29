@@ -13,7 +13,7 @@ namespace CRMApp.Models
         public string Address { get; set; }
         public List<Claim> Claims { get; set; }
         public List<AppUser> AppUsers { get; set; }
-        public List<MonthlySalary> MonthlySalaries { get; set; }
+        public List<MonthlyAmount> MonthlyAmounts { get; set; }
 
     }
 }

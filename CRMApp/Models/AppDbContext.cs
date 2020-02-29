@@ -18,6 +18,7 @@ namespace CRMApp.Models
         public DbSet<Card> Cards { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Request> Requests { get; set; }
+        public DbSet<MonthlyAmount> MonthlyAmounts { get; set; }
         public DbSet<MonthlySalary> MonthlySalaries { get; set; }
         public DbSet<StaffRequest> StaffRequests { get; set; }
         public DbSet<Claim> Claims { get; set; }

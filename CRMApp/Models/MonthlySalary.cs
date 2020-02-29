@@ -10,10 +10,7 @@ namespace CRMApp.Models
         public int Id { get; set; }
         public decimal Amount { get; set; }
         public DateTime SalaryDate { get; set; }
-        public int? CompanyId { get; set; }
-        public Company Company { get; set; }
         public string AppUserId { get; set; }
         public AppUser AppUser { get; set; }
-
     }
 }
