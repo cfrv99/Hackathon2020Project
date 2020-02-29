@@ -1,0 +1,119 @@
+﻿@model CRMApp.Models.CreateStaffForCompanyVM
+
+@{
+    ViewData["Title"] = "AddToCompanyUser";
+}
+
+@*<h1>AddToCompanyUser</h1>
+
+    <h4>CreateStaffForCompanyVM</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="AddToCompanyUser">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Surname" class="control-label"></label>
+                    <input asp-for="Surname" class="form-control" />
+                    <span asp-validation-for="Surname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Amount" class="control-label"></label>
+                    <input asp-for="Amount" class="form-control" />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Tel" class="control-label"></label>
+                    <input asp-for="Tel" class="form-control" />
+                    <span asp-validation-for="Tel" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Signature" class="control-label"></label>
+                    <input asp-for="Signature" class="form-control" />
+                    <span asp-validation-for="Signature" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <select asp-for="ClaimId" asp-items="ViewBag.Claims">
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+<div id="middle">
+    <form asp-action="AddToCompanyUser" class="form">
+        <div class="fromheading">
+            <!-- <img height="50" width="200" src="../../assets/media/freelance-logo.png" alt=""> -->
+        </div>
+        <span class="formwelcome">Add User</span>
+        
+        
+        <div class="forminputs col-s-12 col-xs-12">
+            <input required asp-for="UserName" class="focus email col-xs-12 col-s-12 rounded" minlength="5" placeholder="Username" />
+            <input required minlength="5" asp-for="FirstName" class="focus col-xs-12 col-s-12 rounded" placeholder="Firstname" />
+            <input required asp-for="Surname" class="focus email col-xs-12 col-s-12 rounded" minlength="5" placeholder="Surname" />
+            <input required minlength="5" asp-for="Email" class="focus col-xs-12 col-s-12 rounded" placeholder="Email" type="email" />
+            <div>
+
+                <textarea type="text" class="focus w-100 p-5 rounded tbx" id="description" required asp-for="Description" placeholder="Description"
+                          minlength="10"></textarea>
+
+            </div>
+            <input required minlength="5" asp-for="Amount" class="focus col-xs-12 col-s-12 rounded" placeholder="Amount" type="number" />
+            <input required minlength="5" asp-for="Tel" class="focus col-xs-12 col-s-12 rounded" placeholder="Tel" type="tel" />
+            <input required minlength="5" asp-for="Address" class="focus col-xs-12 col-s-12 rounded" placeholder="Address" type="text" />
+            <input required minlength="5" asp-for="Signature" class="focus col-xs-12 col-s-12 rounded" placeholder="Signature" type="password" />
+
+            <div class="form-group">
+                <select asp-for="ClaimId" asp-items="ViewBag.Claims">
+                </select>
+            </div>
+
+
+        </div>
+
+
+        <div class="login col-xs-12 col-s-12" id="nfb">
+            <button type="submit" class="col-s-12 col-xs-12 rounded btn btn-login">
+                Add User To Company
+            </button>
+        </div>
+        <hr class="w-100" />
+        
+    </form>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

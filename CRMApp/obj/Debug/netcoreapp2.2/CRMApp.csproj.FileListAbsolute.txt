@@ -34,3 +34,11 @@ C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Ru
 C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Rufet\Views\_ViewStart.cshtml.g.cs
 C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Samir\Views\_ViewImports.cshtml.g.cs
 C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Areas\Samir\Views\_ViewStart.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Account\RequestTo.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Bank\Index.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Bank\Accept.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Company\CompanyCreate.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Company\AddToCompanyUser.cshtml.g.cs
+C:\Users\Murad\source\repos\CRMApp\CRMApp\obj\Debug\netcoreapp2.2\Razor\Views\Company\CreateClaim.cshtml.g.cs

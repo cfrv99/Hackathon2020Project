@@ -16,7 +16,7 @@ namespace CRMApp.Models
         public AppUser AppUser { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime DeadLine { get; set; }
-        public int ClaimId { get; set; }
+        public int? ClaimId { get; set; }
         public Claim Claim { get; set; }
     }
     public enum Status

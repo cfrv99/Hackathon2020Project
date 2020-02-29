@@ -47,11 +47,15 @@ namespace CRMApp.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<string>("Address");
+
                     b.Property<decimal>("Amount");
 
-                    b.Property<int>("CardId");
+                    b.Property<int?>("CardId");
 
-                    b.Property<int>("CompanyId");
+                    b.Property<int?>("ClaimId");
+
+                    b.Property<int?>("CompanyId");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
@@ -83,7 +87,11 @@ namespace CRMApp.Migrations
 
                     b.Property<string>("SecurityStamp");
 
-                    b.Property<int>("StaffContractId");
+                    b.Property<string>("Signature");
+
+                    b.Property<int?>("StaffContractId");
+
+                    b.Property<string>("Tel");
 
                     b.Property<bool>("TwoFactorEnabled");
 
@@ -93,6 +101,8 @@ namespace CRMApp.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CardId");
+
+                    b.HasIndex("ClaimId");
 
                     b.HasIndex("CompanyId");
 
@@ -174,7 +184,7 @@ namespace CRMApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CompanyId");
+                    b.Property<int?>("CompanyId");
 
                     b.Property<string>("Name");
 
@@ -212,7 +222,7 @@ namespace CRMApp.Migrations
 
                     b.Property<decimal>("Amount");
 
-                    b.Property<int>("CompanyId");
+                    b.Property<int?>("CompanyId");
 
                     b.Property<decimal>("MonthCount");
 
@@ -233,7 +243,7 @@ namespace CRMApp.Migrations
 
                     b.Property<string>("AppUserId");
 
-                    b.Property<int>("ClaimId");
+                    b.Property<int?>("ClaimId");
 
                     b.Property<DateTime>("CreatedAt");
 
@@ -325,6 +335,8 @@ namespace CRMApp.Migrations
 
                     b.Property<string>("AppUserId");
 
+                    b.Property<bool>("IsAccepted");
+
                     b.Property<string>("RequestDescription");
 
                     b.Property<string>("RequestTitle");
@@ -384,6 +396,27 @@ namespace CRMApp.Migrations
                     b.HasIndex("CompanyId");
 
                     b.ToTable("StaffRequests");
+                });
+
+            modelBuilder.Entity("CRMApp.Models.UserContract", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Agreement");
+
+                    b.Property<decimal>("Amount");
+
+                    b.Property<string>("AppUserId");
+
+                    b.Property<decimal>("MonthCount");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("UserContracts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -508,13 +541,15 @@ namespace CRMApp.Migrations
                 {
                     b.HasOne("CRMApp.Models.Card", "Card")
                         .WithMany()
-                        .HasForeignKey("CardId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CardId");
+
+                    b.HasOne("CRMApp.Models.Claim", "Claim")
+                        .WithMany()
+                        .HasForeignKey("ClaimId");
 
                     b.HasOne("CRMApp.Models.Company", "Company")
                         .WithMany("AppUsers")
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CompanyId");
                 });
 
             modelBuilder.Entity("CRMApp.Models.Bid", b =>
@@ -539,16 +574,14 @@ namespace CRMApp.Migrations
                 {
                     b.HasOne("CRMApp.Models.Company", "Company")
                         .WithMany("Claims")
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CompanyId");
                 });
 
             modelBuilder.Entity("CRMApp.Models.CompanyContract", b =>
                 {
                     b.HasOne("CRMApp.Models.Company", "Company")
                         .WithMany()
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CompanyId");
                 });
 
             modelBuilder.Entity("CRMApp.Models.JobTask", b =>
@@ -559,8 +592,7 @@ namespace CRMApp.Migrations
 
                     b.HasOne("CRMApp.Models.Claim", "Claim")
                         .WithMany()
-                        .HasForeignKey("ClaimId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ClaimId");
                 });
 
             modelBuilder.Entity("CRMApp.Models.MonthlyAmount", b =>
@@ -612,6 +644,13 @@ namespace CRMApp.Migrations
                         .WithMany()
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("CRMApp.Models.UserContract", b =>
+                {
+                    b.HasOne("CRMApp.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -20,6 +20,7 @@ namespace CRMApp.Models
         public DbSet<Request> Requests { get; set; }
         public DbSet<MonthlyAmount> MonthlyAmounts { get; set; }
         public DbSet<MonthlySalary> MonthlySalaries { get; set; }
+        public DbSet<UserContract> UserContracts { get; set; }
         public DbSet<StaffRequest> StaffRequests { get; set; }
         public DbSet<Claim> Claims { get; set; }
         public DbSet<Bank> Banks { get; set; }

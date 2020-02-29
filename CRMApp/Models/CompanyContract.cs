@@ -9,7 +9,7 @@ namespace CRMApp.Models
     {
         public int Id { get; set; }
         public string Agreements { get; set; }
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
         public Company Company { get; set; }
         public decimal MonthCount { get; set; }
         public decimal Amount { get; set; }
